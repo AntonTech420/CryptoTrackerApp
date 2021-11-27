@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Core"
+             x:Class="App1.MainPage">
+
+    <StackLayout>
+        <ListView x:Name="coinListView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!-- <ImageCell 
+                        Text="{Binding name}" 
+                        Detail="{Binding price_usd, StringFormat='{}{0:c}'}" 
+                        ImageSource="{Binding icon_url}" 
+                    /> -->
+                    <ViewCell Height="70">
+                        <StackLayout Orientation="Horizontal" Padding="10,10,10,10">
+                            <Image Source="{Binding icon_url}" WidthRequest="70" />
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding name}" />
+                                <Label Text="{Binding asset_id}" />
+                            </StackLayout>
+                            <Label Text="{Binding price_usd, StringFormat=\{0:c\}}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,20,0" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="AddButton" AutomationId="AddButton" Clicked="AddButton_Clicked" Text="Add"/>
+        <Button x:Name="RefreshButton" AutomationId="RefreshButton" Clicked="RefreshButton_Clicked" Text="Refresh"/>
+    </StackLayout>
+
+</ContentPage>
