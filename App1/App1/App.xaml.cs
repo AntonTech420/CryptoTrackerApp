@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using App1.Data;
+/*using App1.Data;*/
 using App1.Model;
 using Xamarin.Forms;
 

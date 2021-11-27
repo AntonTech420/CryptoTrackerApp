@@ -8,11 +8,6 @@
         <ListView x:Name="coinListView" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <!-- <ImageCell 
-                        Text="{Binding name}" 
-                        Detail="{Binding price_usd, StringFormat='{}{0:c}'}" 
-                        ImageSource="{Binding icon_url}" 
-                    /> -->
                     <ViewCell Height="70">
                         <StackLayout Orientation="Horizontal" Padding="10,10,10,10">
                             <Image Source="{Binding icon_url}" WidthRequest="70" />
