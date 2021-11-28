@@ -33,7 +33,7 @@ namespace App1
         {
             List<Coin> coins;
 
-            var client = new RestClient("http://rest.coinapi.io/v1/assets?filter_asset_id=BTC;ETH;XMR;LTC;USDT" + extraAdd);
+            var client = new RestClient("http://rest.coinapi.io/v1/assets?filter_asset_id=BTC;ETH;XMR;LTC;USDT;DOGE;XRP" + extraAdd);
             var request = new RestRequest(Method.GET);
             request.AddHeader("X-CoinAPI-Key", apiKey);
 
